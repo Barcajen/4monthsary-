@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 4th Monthsary, Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffc1d6);
+    color: #842b50;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+section {
+    position: relative;
+    z-index: 1;
+    padding: 25px 15px;
+}
+
+.card {
+    max-width: 450px;
+    margin: 15px auto;
+    padding: 28px 22px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.91);
+    box-shadow: 0 8px 25px #a52e5b30;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+.big-heart {
+    font-size: 75px;
+    margin: 15px 0;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.15); }
+}
+
+button {
+    border: none;
+    background: #ff5487;
+    color: white;
+    padding: 13px 22px;
+    margin: 8px 4px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px #ff548755;
+}
+
+button:active {
+    transform: scale(0.96);
+  }
+
+.hidden {
+    display: none;
+}
+
+.photo {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid #ffc5d8;
+    margin-top: 10px;
+}
+
+.music-button {
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    right: 15px;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 12px 16px;
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    padding: 25px 15px 85px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<!-- MUSIC: ilagay ang love.mp3 sa parehong folder -->
+<audio id="loveMusic" loop preload="auto">
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<section id="opening">
+    <div class="card">
+        <div class="big-heart">💝</div>
+        <h1>For My Love ❤️</h1>
+        <p>Happy 4th Monthsary, Lovey!</p>
+        <p>I prepared something special just for you.</p>
+        <p>Ready ka na ba? 🥹💕</p>
+        <button onclick="openGift()">Open Your Gift 💌</button>
+    </div>
+</section>
+
+<main id="main" class="hidden">
+
+    <section>
+        <div class="card">
+            <div class="big-heart">❤️</div>
+            <h1>Happy 4th Monthsary!</h1>
+            <p>Four months of love, laughter, memories,
+            and choosing each other every day.</p>
+            <p>You're one of the most beautiful parts
+            of my life, and I'm thankful for you. 💗</p>
+            <p><b>Four months down, more memories to go!</b></p>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <h2>📸 Our Memories</h2>
+            <p>Every picture tells a little story about us.</p>
+
+            <!-- Palitan ng actual picture files -->
+            <img class="photo" src="picture1.jpg"
+                 alt="Our first photo">
+
+            <p>One memory I'll always treasure. 💕</p>
+
+            <img class="photo" src="photo2.jpg"
+                 alt="Our special memory">
+
+            <p>And many more memories to come. ❤️</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <h2>💌 A Letter For You</h2>
+
+            <p>My Love,</p>
+
+            <p>Happy 4th monthsary sa atin, lovey!
+            Thank you for being part of my life and for
+            giving me reasons to smile kahit sa simpleng
+            bagay lang.</p>
+
+            <p>Alam kong hindi tayo perfect. May tampuhan,
+            misunderstandings, at minsan may kakulitan.
+            Pero sana, sa bawat problema, piliin pa rin
+            nating mag-usap, makinig, at magkaintindihan.</p>
+
+            <p>Kahit malayo tayo sa isa't isa, gusto kong
+            maramdaman mo na special ka sa akin.
+            Distance may keep us apart physically,
+            but you still have a place in my heart.</p>
+
+            <p>Thank you for the memories, the laughter,
+            the lambing, and the little moments that make
+            our relationship special.</p>
+
+            <p>I can't promise that every day will be
+            perfect, but I hope we continue learning,
+            growing, and loving each other better.</p>
+
+            <p>Happy 4th monthsary, my love.
+            Here's to more months and beautiful memories
+            together. I love you so much! ❤️</p>
+
+            <p>Always yours,<br><b>Your Love 💗</b></p>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <h2>One Last Surprise 🥹💖</h2>
+            <p>There's something I want you to remember.</p>
+
+            <button onclick="revealSecret()">
+                Tap Me, Love 💌
+            </button>
+
+            <p id="secret" class="hidden">
+                No matter how many days pass, you will
+                always be someone special to me.
+                Thank you for these four months.
+                I love you, lovey! ❤️😘
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        Made with love, just for you ❤️<br>
+        Happy 4th Monthsary! 💕
+    </footer>
+
+</main>
+
+<button id="musicButton" class="music-button hidden"
+        onclick="toggleMusic()">🎵 Play Music</button><script>
+const music = document.getElementById("loveMusic");
+const musicButton = document.getElementById("musicButton");
+
+async function startMusic() {
+    try {
+        await music.play();
+        musicButton.textContent = "🎵 Pause Music";
+    } catch (error) {
+        musicButton.textContent = "🎵 Play Music";
+    }
+}
+
+function openGift() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("main").classList.remove("hidden");
+    musicButton.classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+    startMusic();
+}
+
+function toggleMusic() {
+    if (music.paused) {
+        startMusic();
+    } else {
+        music.pause();
+        musicButton.textContent = "🎵 Play Music";
+    }
+}
+
+function revealSecret() {
+    document.getElementById("secret").classList.remove("hidden");
+}
+
+function createHeart() {
+    const heart = document.createElement("span");
+    heart.className = "heart";
+
+    const symbols = ["❤️", "💕", "💗", "💖", "💘", "💝"];
+    heart.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+    document.getElementById("hearts").appendChild(heart);
+
+    setTimeout(() => heart.remove(), 11000);
+}
+
+setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
